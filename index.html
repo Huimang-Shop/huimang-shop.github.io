@@ -2,79 +2,207 @@
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <title>هیمانگ | استیکر و لوازم ژورنال</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #fff8fb;
-      color: #333;
+      font-family: Tahoma, Arial, sans-serif;
+      background: #fffaf8;
+      color: #5a463b;
     }
 
-    header {
-      background: #f8cddd;
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 50px 25px;
+    }
+
+    .hero-container {
+      width: 100%;
+      max-width: 1200px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+      direction: ltr;
+    }
+
+    .logo-area {
       text-align: center;
-      padding: 60px 20px;
     }
 
-    header h1 {
-      margin: 0 0 12px;
-      font-size: 42px;
-    }
-
-    header p {
-      margin: 0;
-      font-size: 18px;
-    }
-
-    main {
-      max-width: 1000px;
+    .logo-area img {
+      width: 100%;
+      max-width: 520px;
+      border-radius: 25px;
+      display: block;
       margin: auto;
-      padding: 50px 20px;
-      text-align: center;
     }
 
-    .message {
+    .product-area {
+      direction: rtl;
+    }
+
+    .product-card {
       background: white;
-      padding: 35px;
-      border-radius: 20px;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 12px 35px rgba(95, 71, 57, 0.12);
+      transition: transform 0.25s ease;
     }
 
-    .message h2 {
-      margin-top: 0;
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card img {
+      width: 100%;
+      display: block;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 28px;
+      text-align: right;
+    }
+
+    .product-info h1 {
+      margin: 0 0 12px;
+      font-size: 28px;
+    }
+
+    .product-description {
+      line-height: 1.9;
+      color: #766257;
+      margin-bottom: 18px;
+    }
+
+    .product-code {
+      font-size: 15px;
+      color: #927c70;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-size: 24px;
+      font-weight: bold;
+      color: #d77d92;
+      margin-bottom: 20px;
+    }
+
+    .order-button {
+      display: inline-block;
+      background: #e9a2b2;
+      color: white;
+      text-decoration: none;
+      padding: 14px 24px;
+      border-radius: 14px;
+      font-weight: bold;
+      transition: background 0.2s ease;
+    }
+
+    .order-button:hover {
+      background: #d9899d;
     }
 
     footer {
       text-align: center;
-      padding: 30px;
-      color: #777;
+      padding: 25px;
+      color: #927c70;
+      font-size: 14px;
+    }
+
+    @media (max-width: 800px) {
+      .hero {
+        padding: 25px 18px;
+      }
+
+      .hero-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .logo-area img {
+        max-width: 420px;
+      }
+
+      .product-info h1 {
+        font-size: 23px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <h1>هیمانگ 🌸</h1>
-    <p>دنیای استیکر، ژورنال و چیزهای کوچکِ حال‌خوب‌کن</p>
-  </header>
+  <main class="hero">
 
-  <main>
-    <section class="message">
-      <h2>به هیمانگ خوش آمدید</h2>
+    <div class="hero-container">
 
-      <p>
-        محصولات هیمانگ به‌زودی اینجا قرار می‌گیرند.
-      </p>
+      <section class="logo-area">
+        <img
+          src="logo.png"
+          alt="لوگوی هیمانگ"
+        >
+      </section>
 
-      <p>
-        برای مشاهده محصولات و ثبت سفارش می‌توانید صفحه اینستاگرام ما را دنبال کنید.
-      </p>
-    </section>
+      <section class="product-area">
+
+        <article class="product-card">
+
+          <img
+            src="travel-pack.png"
+            alt="پک استیکر مسافرتی هیمانگ"
+          >
+
+          <div class="product-info">
+
+            <h1>پک استیکر Travel More</h1>
+
+            <p class="product-description">
+              مجموعه‌ای از استیکرهای رنگی با تم سفر، چمدان،
+              دوربین، هواپیما و وسایل دوست‌داشتنی مسافرتی.
+            </p>
+
+            <p class="product-code">
+              کد محصول: H001
+            </p>
+
+            <p class="price">
+              ۱۲۵٬۰۰۰ تومان
+            </p>
+
+            <a
+              class="order-button"
+              href="https://instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              سفارش از طریق اینستاگرام
+            </a>
+
+          </div>
+
+        </article>
+
+      </section>
+
+    </div>
+
   </main>
 
   <footer>
