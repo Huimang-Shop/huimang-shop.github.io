@@ -446,4 +446,777 @@
       margin-bottom: 25px;
     }
 
-    .meta-box
+    .meta-box {
+      padding: 13px 15px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-small);
+    }
+
+    .meta-box span {
+      display: block;
+      margin-bottom: 2px;
+      color: var(--text-light);
+      font-size: 11px;
+    }
+
+    .meta-box strong {
+      font-size: 14px;
+    }
+
+    .price {
+      margin: 0 0 22px;
+      color: var(--pink-dark);
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .product-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .copy-button {
+      min-height: 49px;
+      padding: 0 18px;
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      cursor: pointer;
+      font-family: inherit;
+      font-weight: bold;
+    }
+
+    .copy-button:hover {
+      background: var(--surface-soft);
+    }
+
+    /* Order card */
+
+    .order-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 34px;
+      background: var(--text);
+      color: white;
+      border-radius: var(--radius-large);
+      overflow: hidden;
+    }
+
+    .order-card h3 {
+      margin: 0 0 10px;
+      font-size: 29px;
+      line-height: 1.45;
+    }
+
+    .order-card > p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 14px;
+    }
+
+    .order-steps {
+      display: grid;
+      gap: 17px;
+      margin: 35px 0;
+    }
+
+    .order-step {
+      display: grid;
+      grid-template-columns: 38px 1fr;
+      align-items: start;
+      gap: 12px;
+    }
+
+    .step-number {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: 50%;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .order-step strong {
+      display: block;
+      margin-bottom: 3px;
+      font-size: 14px;
+    }
+
+    .order-step p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    .order-card .button {
+      width: 100%;
+      background: white;
+      color: var(--text);
+    }
+
+    /* Brand story */
+
+    .story {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .story-logo {
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      background: white;
+      border-radius: 40px;
+      box-shadow: var(--shadow);
+    }
+
+    .story-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.1);
+    }
+
+    .story h2 {
+      margin: 0 0 20px;
+      font-size: clamp(31px, 4vw, 48px);
+      line-height: 1.45;
+    }
+
+    .story p {
+      margin: 0 0 18px;
+      color: var(--text-light);
+    }
+
+    .story-signature {
+      color: var(--pink-dark);
+      font-weight: bold;
+    }
+
+    /* Footer */
+
+    footer {
+      padding: 55px 0 35px;
+      background: white;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .footer-content p {
+      margin: 0;
+      color: var(--text-light);
+      font-size: 13px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-links a {
+      color: var(--text-light);
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    .footer-links a:hover {
+      color: var(--pink-dark);
+    }
+
+    /* Responsive */
+
+    @media (max-width: 980px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero-grid,
+      .story {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-grid {
+        gap: 45px;
+      }
+
+      .hero-copy {
+        order: 1;
+      }
+
+      .hero-art {
+        order: 2;
+        max-width: 650px;
+        width: 100%;
+        margin: auto;
+      }
+
+      .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .showcase-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .product-card {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .story-logo {
+        max-width: 600px;
+        width: 100%;
+        margin: auto;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .container {
+        width: min(100% - 28px, 1180px);
+      }
+
+      .announcement {
+        font-size: 11px;
+      }
+
+      .navbar {
+        min-height: 72px;
+      }
+
+      .brand {
+        width: 138px;
+        height: 50px;
+      }
+
+      .nav-order {
+        padding: 9px 14px;
+        font-size: 11px;
+      }
+
+      .hero {
+        padding: 48px 0 65px;
+      }
+
+      .hero-description {
+        font-size: 15px;
+      }
+
+      .section {
+        padding: 65px 0;
+      }
+
+      .section-heading {
+        display: block;
+      }
+
+      .category-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .category-card {
+        min-height: 170px;
+      }
+
+      .product-card {
+        grid-template-columns: 1fr;
+      }
+
+      .product-image {
+        min-height: 390px;
+      }
+
+      .product-details {
+        padding: 28px 22px 32px;
+      }
+
+      .product-meta {
+        grid-template-columns: 1fr;
+      }
+
+      .order-card {
+        padding: 28px 22px;
+      }
+
+      .footer-content {
+        display: block;
+        text-align: center;
+      }
+
+      .footer-links {
+        justify-content: center;
+        margin-top: 16px;
+      }
+    }
+
+    @media (max-width: 430px) {
+      .hero h1 {
+        font-size: 37px;
+      }
+
+      .hero-buttons,
+      .product-actions {
+        display: grid;
+      }
+
+      .button,
+      .copy-button {
+        width: 100%;
+      }
+
+      .product-image {
+        min-height: 330px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="announcement">
+    کاتالوگ آنلاین هیمانگ ✦ ثبت سفارش از طریق اینستاگرام
+  </div>
+
+  <header class="site-header">
+    <div class="container navbar">
+
+      <a class="brand" href="#home" aria-label="هیمانگ">
+        <img
+          src="logo.jpeg.png"
+          alt="لوگوی هیمانگ"
+        >
+      </a>
+
+      <nav class="nav-links" aria-label="منوی اصلی">
+        <a href="#home">خانه</a>
+        <a href="#categories">دسته‌بندی‌ها</a>
+        <a href="#products">محصولات</a>
+        <a href="#about">درباره هیمانگ</a>
+      </nav>
+
+      <a
+        class="nav-order"
+        href="https://instagram.com/huimangstationery"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        ثبت سفارش
+      </a>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+
+        <div class="hero-copy">
+
+          <div class="eyebrow">
+            🌱 استیکر و لوازم ژورنال
+          </div>
+
+          <h1>
+            چیزهای کوچک برای روزهای قشنگ‌تر
+          </h1>
+
+          <p class="hero-description">
+            هیمانگ مجموعه‌ای از استیکرها و لوازم دوست‌داشتنی
+            برای ژورنال، برنامه‌ریزی، هدیه و ساختن لحظه‌های
+            رنگی‌تر است.
+          </p>
+
+          <div class="hero-buttons">
+
+            <a
+              class="button button-primary"
+              href="#products"
+            >
+              دیدن محصولات
+            </a>
+
+            <a
+              class="button button-secondary"
+              href="https://instagram.com/huimangstationery"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              اینستاگرام هیمانگ
+            </a>
+
+          </div>
+
+        </div>
+
+        <div class="hero-art">
+
+          <img
+            src="logo.jpeg.png"
+            alt="هیمانگ"
+          >
+
+          <div class="hero-note">
+            Huimang یعنی امید ♡
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section
+      class="section section-soft"
+      id="categories"
+    >
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div>
+            <h2>دنیای هیمانگ</h2>
+
+            <p>
+              محصول مورد علاقه‌ات را بر اساس حال‌وهوا
+              و کاربردش پیدا کن.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="category-grid">
+
+          <a
+            class="category-card category-pink"
+            href="#products"
+          >
+            <span class="category-icon">🌸</span>
+
+            <div>
+              <h3>استیکر پک‌ها</h3>
+              <p>پک‌های موضوعی برای ژورنال و دکور</p>
+            </div>
+          </a>
+
+          <a
+            class="category-card category-green"
+            href="#products"
+          >
+            <span class="category-icon">📖</span>
+
+            <div>
+              <h3>ژورنال و اسکرپ‌بوک</h3>
+              <p>برای ثبت فکرها، خاطره‌ها و برنامه‌ها</p>
+            </div>
+          </a>
+
+          <a
+            class="category-card category-yellow"
+            href="#products"
+          >
+            <span class="category-icon">✨</span>
+
+            <div>
+              <h3>استیکرهای رولی</h3>
+              <p>استیکرهای کوچک و کاربردی روزمره</p>
+            </div>
+          </a>
+
+          <a
+            class="category-card category-lavender"
+            href="#products"
+          >
+            <span class="category-icon">🎀</span>
+
+            <div>
+              <h3>لوازم کاغذی</h3>
+              <p>جزئیات کوچکی که میزت را قشنگ‌تر می‌کنند</p>
+            </div>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section" id="products">
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div>
+            <h2>منتخب هیمانگ</h2>
+
+            <p>
+              محصولات محبوب و تازه‌رسیده‌های هیمانگ را
+              اینجا ببین.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="showcase-grid">
+
+          <article class="product-card">
+
+            <div class="product-image">
+
+              <img
+                src="travel-pack.jpeg.png"
+                alt="پک استیکر Travel More هیمانگ"
+              >
+
+              <span class="stock-badge">
+                موجود
+              </span>
+
+            </div>
+
+            <div class="product-details">
+
+              <p class="product-category">
+                استیکر پک
+              </p>
+
+              <h3>
+                پک استیکر Travel More
+              </h3>
+
+              <p class="product-description">
+                مجموعه‌ای رنگی با تم سفر، چمدان، دوربین،
+                هواپیما و وسایل دوست‌داشتنی مسافرتی؛ مناسب
+                ژورنال، دفتر و لپ‌تاپ.
+              </p>
+
+              <div class="product-meta">
+
+                <div class="meta-box">
+                  <span>کد محصول</span>
+                  <strong>H001</strong>
+                </div>
+
+                <div class="meta-box">
+                  <span>وضعیت</span>
+                  <strong>موجود</strong>
+                </div>
+
+              </div>
+
+              <p class="price">
+                ۱۲۵٬۰۰۰ تومان
+              </p>
+
+              <div class="product-actions">
+
+                <a
+                  class="button button-primary"
+                  href="https://instagram.com/huimangstationery"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  سفارش در اینستاگرام
+                </a>
+
+                <button
+                  class="copy-button"
+                  type="button"
+                  onclick="copyProductCode(this)"
+                >
+                  کپی کد محصول
+                </button>
+
+              </div>
+
+            </div>
+
+          </article>
+
+          <aside class="order-card" id="order">
+
+            <div>
+
+              <h3>
+                سفارش چطور انجام می‌شود؟
+              </h3>
+
+              <p>
+                ساده، مستقیم و بدون مراحل اضافی.
+              </p>
+
+              <div class="order-steps">
+
+                <div class="order-step">
+
+                  <span class="step-number">۱</span>
+
+                  <div>
+                    <strong>کد محصول را بردار</strong>
+
+                    <p>
+                      کد محصول موردنظرت را کپی کن.
+                    </p>
+                  </div>
+
+                </div>
+
+                <div class="order-step">
+
+                  <span class="step-number">۲</span>
+
+                  <div>
+                    <strong>در اینستاگرام پیام بده</strong>
+
+                    <p>
+                      کد محصول و تعداد موردنظرت را ارسال کن.
+                    </p>
+                  </div>
+
+                </div>
+
+                <div class="order-step">
+
+                  <span class="step-number">۳</span>
+
+                  <div>
+                    <strong>موجودی و مبلغ تأیید می‌شود</strong>
+
+                    <p>
+                      سپس اطلاعات پرداخت و ارسال برایت فرستاده می‌شود.
+                    </p>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <a
+              class="button"
+              href="https://instagram.com/huimangstationery"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              رفتن به اینستاگرام
+            </a>
+
+          </aside>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section
+      class="section section-soft"
+      id="about"
+    >
+      <div class="container story">
+
+        <div class="story-logo">
+
+          <img
+            src="logo.jpeg.png"
+            alt="لوگوی هیمانگ"
+          >
+
+        </div>
+
+        <div>
+
+          <div class="eyebrow">
+            درباره برند
+          </div>
+
+          <h2>
+            هیمانگ یعنی امید
+          </h2>
+
+          <p>
+            هیمانگ از علاقه ما به استیکر، ژورنال،
+            رنگ‌ها و چیزهای کوچکی شکل گرفت که می‌توانند
+            حال یک روز معمولی را بهتر کنند.
+          </p>
+
+          <p>
+            ما محصولاتی را انتخاب می‌کنیم که هم کاربردی
+            باشند و هم حس لطیف، خلاق و دوست‌داشتنی
+            به دفتر، میز کار و هدیه‌ها بدهند.
+          </p>
+
+          <p class="story-signature">
+            با عشق، از طرف خانواده هیمانگ 🌱
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+
+      <p>
+        © <span id="year"></span> Huimang —
+        تمامی حقوق محفوظ است.
+      </p>
+
+      <div class="footer-links">
+
+        <a href="#home">
+          خانه
+        </a>
+
+        <a href="#products">
+          محصولات
+        </a>
+
+        <a
+          href="https://instagram.com/huimangstationery"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          اینستاگرام
+        </a>
+
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    async function copyProductCode(button) {
+      const productCode = "H001";
+      const originalText = button.textContent;
+
+      try {
+        await navigator.clipboard.writeText(productCode);
+        button.textContent = "کد کپی شد ✓";
+      } catch (error) {
+        button.textContent = "کد: H001";
+      }
+
+      setTimeout(() => {
+        button.textContent = originalText;
+      }, 1800);
+    }
+  </script>
+
+</body>
+</html>
